@@ -70,6 +70,11 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Language choice persists via `localStorage` and is re-applied on every page load, so navigating between the homepage and project pages keeps the selected language
 - [x] Verified in browser: clicking ES translates the entire homepage (hero, about, experience, projects, footer) correctly; navigating to a project detail page after switching to ES keeps Spanish automatically (confirmed on Auto Expreso — nav, back-link, and tagline all in Spanish, project name/case-study images unchanged)
 
+## Follow-up — force "Darío Sánchez" onto one line on all mobile widths
+- [x] Replaced the two-tier approach (44px floor down to 720px, then a separate 375px breakpoint dropping to 2.1rem) with one unified fluid formula across the whole mobile range: `font-size: clamp(1.8rem, 9vw, 2.75rem)` plus `white-space: nowrap` on `.hero h1` inside the `max-width: 720px` query — guarantees the heading never wraps and scales continuously down to a 28.8px floor for the narrowest phones instead of jumping between two fixed sizes
+- [x] Verified via computed layout at two real widths: 352px (font resolves to 31.68px, heading width 288.67px, well inside the viewport, `body.scrollWidth` 337px — no horizontal overflow) and 375px (33.78px font, clean single line, confirmed visually via screenshot); the upper mobile bound (700-720px) reuses the same 44px cap already verified safe earlier
+- [x] Removed the now-superseded standalone `@media (max-width: 375px)` block
+
 ## Follow-up — fix: "Sánchez" coral box touching "Darío" text
 - [x] Added `margin-left: 0.15em` to `.hero h1 .highlight` so the coral box no longer sits flush against the preceding word — previously relied only on the plain text space character, which read as touching/too-tight at the new smaller 375px breakpoint font size
 - [x] Verified in browser: clear visible gap between "Darío" and the "Sánchez" box now
