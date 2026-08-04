@@ -70,6 +70,10 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Language choice persists via `localStorage` and is re-applied on every page load, so navigating between the homepage and project pages keeps the selected language
 - [x] Verified in browser: clicking ES translates the entire homepage (hero, about, experience, projects, footer) correctly; navigating to a project detail page after switching to ES keeps Spanish automatically (confirmed on Auto Expreso — nav, back-link, and tagline all in Spanish, project name/case-study images unchanged)
 
+## Follow-up — fix: "Sánchez" coral box touching "Darío" text
+- [x] Added `margin-left: 0.15em` to `.hero h1 .highlight` so the coral box no longer sits flush against the preceding word — previously relied only on the plain text space character, which read as touching/too-tight at the new smaller 375px breakpoint font size
+- [x] Verified in browser: clear visible gap between "Darío" and the "Sánchez" box now
+
 ## Follow-up — hero heading wraps too tight on narrow phones
 - [x] Diagnosed via simulated narrow-viewport testing (the browser resize tool has a ~425px floor in this environment, so tested by temporarily constraining `.hero-content`'s width via injected CSS instead): at a 320px-phone-equivalent content width (272px), the "Sánchez" coral highlight box measured 226px wide — only 46px of margin, uncomfortably tight, since `.hero h1`'s `font-size: clamp(2.75rem, 6.5vw, 4.75rem)` bottoms out at its 2.75rem (44px) floor for effectively all mobile widths (the `vw`-based preferred value never exceeds the floor below ~676px viewport width), so the heading never got any smaller on phones no matter how narrow
 - [x] Added `@media (max-width: 375px) { .hero h1 { font-size: 2.1rem; } }` to shrink the heading specifically on smaller phones

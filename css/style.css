@@ -286,6 +286,7 @@ main > .section:first-child {
 .hero h1 .highlight {
   background: var(--coral);
   padding: 2px 14px;
+  margin-left: 0.15em;
   border-radius: 12px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
