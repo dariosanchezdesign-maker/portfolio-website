@@ -818,3 +818,9 @@ main > .section:first-child {
   .project-tile:nth-child(1),
   .project-tile:nth-child(2) { grid-column: span 1; grid-row: span 1; }
 }
+
+@media (max-width: 375px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}

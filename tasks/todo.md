@@ -70,6 +70,11 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Language choice persists via `localStorage` and is re-applied on every page load, so navigating between the homepage and project pages keeps the selected language
 - [x] Verified in browser: clicking ES translates the entire homepage (hero, about, experience, projects, footer) correctly; navigating to a project detail page after switching to ES keeps Spanish automatically (confirmed on Auto Expreso — nav, back-link, and tagline all in Spanish, project name/case-study images unchanged)
 
+## Follow-up — hero heading wraps too tight on narrow phones
+- [x] Diagnosed via simulated narrow-viewport testing (the browser resize tool has a ~425px floor in this environment, so tested by temporarily constraining `.hero-content`'s width via injected CSS instead): at a 320px-phone-equivalent content width (272px), the "Sánchez" coral highlight box measured 226px wide — only 46px of margin, uncomfortably tight, since `.hero h1`'s `font-size: clamp(2.75rem, 6.5vw, 4.75rem)` bottoms out at its 2.75rem (44px) floor for effectively all mobile widths (the `vw`-based preferred value never exceeds the floor below ~676px viewport width), so the heading never got any smaller on phones no matter how narrow
+- [x] Added `@media (max-width: 375px) { .hero h1 { font-size: 2.1rem; } }` to shrink the heading specifically on smaller phones
+- [x] Verified via the same simulated-width technique: at the smaller size, the "Sánchez" box measured 179px against a 272px container — comfortable margin instead of nearly touching the edge
+
 ## Follow-up — nav bar width matches page content width
 - [x] Changed `.site-header`'s `max-width` from a hardcoded `980px` to `var(--container-w)` (1140px) — the same variable `.container` uses for all page content — so the floating pill now spans exactly as wide as the content below it
 - [x] Verified in browser: pill's edges line up with the hero content's outer edges and the About Me section's stat cards
