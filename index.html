@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darío Sánchez — UX/UI Designer &amp; Web Developer</title>
+<meta name="description" content="Portfolio of Darío Sánchez, UX/UI Designer and Web Developer.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo"><img src="assets/logo.png" alt="Darío Sánchez logo"></a>
+    <nav class="nav" id="nav">
+      <a href="#about" data-nav data-i18n="nav.about" data-i18n-roll><span class="nav-clip"><span class="nav-roll"><span class="nav-line">About</span><span class="nav-line nav-line--dim">About</span></span></span></a>
+      <a href="#experience" data-nav data-i18n="nav.experience" data-i18n-roll><span class="nav-clip"><span class="nav-roll"><span class="nav-line">Experience</span><span class="nav-line nav-line--dim">Experience</span></span></span></a>
+      <a href="#projects" data-nav data-i18n="nav.projects" data-i18n-roll><span class="nav-clip"><span class="nav-roll"><span class="nav-line">Projects</span><span class="nav-line nav-line--dim">Projects</span></span></span></a>
+      <a href="#contact" data-nav data-i18n="nav.contact" data-i18n-roll><span class="nav-clip"><span class="nav-roll"><span class="nav-line">Contact</span><span class="nav-line nav-line--dim">Contact</span></span></span></a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">UX/UI Designer / Web Developer</span></p>
+        <h1>Darío <span class="highlight">Sánche<span class="win95-letter">z</span></span></h1>
+        <p class="hero-copy" data-i18n="hero.copy">
+          I design and build accessible, conversion-focused digital products — from Figma
+          prototypes to production-ready Webflow and WordPress sites for startups and
+          government agencies alike, increasingly powered by AI-native tools like Claude
+          Code and Cursor to move faster from concept to shipped product.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience" data-i18n="hero.cta.experience">View Experience</a>
+          <a class="btn btn-outline" href="assets/Dario-Sanchez-CV.pdf" target="_blank" rel="noopener" data-i18n="hero.cta.cv">Download CV</a>
+        </div>
+        <div class="hero-meta">
+          <a href="mailto:dariosanchezdesign@gmail.com">dariosanchezdesign@gmail.com</a>
+          <span class="sep">·</span>
+          <a href="tel:+17875983001">(787) 598-3001</a>
+          <span class="sep">·</span>
+          <span>San Juan, P.R.</span>
+        </div>
+      </div>
+      <div class="hero-photo"><img src="assets/logo.png" alt="Darío Sánchez logo"></div>
+    </div>
+
+    <div aria-hidden="true">
+      <span class="badge badge-icon badge-1"><img src="assets/icons/figma-logo.svg" alt=""></span>
+      <span class="badge badge-icon badge-2"><img src="assets/icons/cursor-logo.svg" alt=""></span>
+      <span class="badge badge-pill badge-3">UX/UI</span>
+      <span class="badge badge-icon badge-4"><img src="assets/icons/claude-logo.svg" alt=""></span>
+      <span class="badge badge-pill badge-5">DEVELOPMENT</span>
+      <span class="badge badge-pill badge-6">AI-WORKFLOW</span>
+      <div class="badge badge-circle">
+        <svg viewBox="0 0 120 120">
+          <circle class="ring" cx="60" cy="60" r="52"></circle>
+          <circle class="core" cx="60" cy="60" r="6"></circle>
+          <path id="circlePath" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" fill="none"></path>
+          <text font-size="9" font-weight="700" letter-spacing="1.5">
+            <textPath href="#circlePath">UX/UI DESIGNER • WEB DEVELOPER • </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title" data-i18n-first><span class="win95-letter">A</span>bout Me</h2>
+      <div class="about-grid">
+        <div class="stat-card">
+          <h3 data-i18n="about.stat.experience.title">Experience</h3>
+          <p data-i18n="about.stat.experience.years">1+ year(s)</p>
+          <p data-i18n="about.stat.experience.role">UI/UX Design</p>
+        </div>
+        <div class="stat-card">
+          <h3 data-i18n="about.stat.education.title">Education</h3>
+          <p data-i18n="about.stat.education.degree">Industrial Design Bachelor's Degree</p>
+        </div>
+      </div>
+      <p class="about-copy" data-i18n="about.copy">As a recent Industrial Design graduate transitioning into UI/UX Design, I bring a fresh perspective and a passion for crafting intuitive, user-centered designs. My background in Industrial Design equips me with a unique blend of problem-solving skills and aesthetic sensibility, which I now channel into the digital space.</p>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-i18n="experience.title" data-i18n-first><span class="win95-letter">E</span>xperience</h2>
+      <div class="services-list">
+        <div class="service-item open">
+          <button type="button" class="service-header" aria-expanded="true"><span><span class="index">01</span><span data-i18n="experience.01.title">UI/UX</span></span><span class="chev">↓</span></button>
+          <div class="service-panel"><div class="service-body"><p data-i18n="experience.01.body">Creating user interfaces that are seamless, effective, and delightful to interact with.</p></div></div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-header" aria-expanded="false"><span><span class="index">02</span><span data-i18n="experience.02.title">Web &amp; Mobile App</span></span><span class="chev">↓</span></button>
+          <div class="service-panel"><div class="service-body"><p data-i18n="experience.02.body">Turning concepts into outstanding web and mobile application experiences.</p></div></div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-header" aria-expanded="false"><span><span class="index">03</span><span data-i18n="experience.03.title">Development</span></span><span class="chev">↓</span></button>
+          <div class="service-panel"><div class="service-body"><p data-i18n="experience.03.body">Realizing your vision through cutting-edge technology and modern design innovations.</p></div></div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-header" aria-expanded="false"><span><span class="index">04</span><span data-i18n="experience.04.title">Design &amp; Creativity</span></span><span class="chev">↓</span></button>
+          <div class="service-panel"><div class="service-body"><p data-i18n="experience.04.body">Creating visually captivating designs that resonate with your audience.</p></div></div>
+        </div>
+        <div class="service-item">
+          <button type="button" class="service-header" aria-expanded="false"><span><span class="index">05</span><span data-i18n="experience.05.title">AI-Augmented Workflow</span></span><span class="chev">↓</span></button>
+          <div class="service-panel"><div class="service-body"><p data-i18n="experience.05.body">Pairing design craft with AI-native tools like Figma, Claude Code, and Cursor to move from idea to working product faster — without cutting corners on quality.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-i18n="projects.title" data-i18n-first><span class="win95-letter">P</span>rojects</h2>
+      <div class="projects-grid">
+        <a class="project-tile" href="projects/fitforge.html">
+          <span class="tile-arrow">↗</span>
+          <div class="tile-thumb"><img src="assets/projects/fitforge/frame-1.png" alt="FitForge app screen"></div>
+          <div class="tile-text"><h3>FitForge</h3><p data-i18n="projects.fitforge.caption">Mobile fitness application</p></div>
+        </a>
+        <a class="project-tile" href="projects/dine-divide.html">
+          <span class="tile-arrow">↗</span>
+          <div class="tile-thumb"><img src="assets/projects/dine-divide/frame-1.png" alt="Dine Divide app screen"></div>
+          <div class="tile-text"><h3>Dine Divide</h3><p data-i18n="projects.dinedivide.caption">Food-focused application</p></div>
+        </a>
+        <a class="project-tile" href="projects/auto-expreso.html">
+          <span class="tile-arrow">↗</span>
+          <div class="tile-thumb"><img src="assets/projects/auto-expreso/frame-1.png" alt="Auto Expreso app screen"></div>
+          <div class="tile-text"><h3>Auto Expreso</h3><p data-i18n="projects.autoexpreso.caption">Transportation &amp; automotive service app</p></div>
+        </a>
+        <a class="project-tile" href="projects/sector-data-viz.html">
+          <span class="tile-arrow">↗</span>
+          <div class="tile-thumb contain"><img src="assets/projects/sector-data-viz/logo.webp" alt="Estudios Técnicos Inc. logo"></div>
+          <div class="tile-text"><h3>Sector Data Viz</h3><p data-i18n="projects.sectordataviz.caption">With Estudios Técnicos Inc.</p></div>
+        </a>
+        <a class="project-tile" href="projects/banco-popular-landing-page.html">
+          <span class="tile-arrow">↗</span>
+          <div class="tile-thumb contain"><img src="assets/projects/banco-popular/icon.png" alt="Banco Popular logo"></div>
+          <div class="tile-text"><h3>Banco Popular</h3><p data-i18n="projects.bancopopular.caption">Landing page design</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <p class="eyebrow" style="color: var(--ink);"><span class="dot" style="background: var(--ink);"></span><span data-i18n="footer.eyebrow">Get In Touch</span></p>
+    <h2 data-i18n="footer.title" data-i18n-first><span class="win95-letter">C</span>ontact Me</h2>
+    <div class="footer-links">
+      <a href="mailto:dariosanchezdesign@gmail.com">dariosanchezdesign@gmail.com ↗</a>
+      <a href="tel:+17875983001">(787) 598-3001 ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
