@@ -90,7 +90,7 @@ const translations = {
 
     'about.title': 'Sobre mí',
     'about.stat.experience.title': 'Experiencia',
-    'about.stat.experience.years': '1+ año(s)',
+    'about.stat.experience.years': '3+ años',
     'about.stat.experience.role': 'Diseño UI/UX',
     'about.stat.education.title': 'Educación',
     'about.stat.education.degree': 'Licenciatura en Diseño Industrial',
