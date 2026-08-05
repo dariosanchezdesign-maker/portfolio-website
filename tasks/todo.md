@@ -75,6 +75,11 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Verified via computed layout at two real widths: 352px (font resolves to 31.68px, heading width 288.67px, well inside the viewport, `body.scrollWidth` 337px — no horizontal overflow) and 375px (33.78px font, clean single line, confirmed visually via screenshot); the upper mobile bound (700-720px) reuses the same 44px cap already verified safe earlier
 - [x] Removed the now-superseded standalone `@media (max-width: 375px)` block
 
+## Follow-up — consistent thumbnails for all project cards
+- [x] Sector Data Viz and Banco Popular tiles previously used their logo marks (`.tile-thumb.contain`, `object-fit: contain`) instead of a screenshot, looking visually different from the other 3 cards
+- [x] Swapped both to `frame-2.png` (a more visual, less text-heavy screen from each case study) using the standard full-bleed `.tile-thumb` (no `contain`), matching FitForge/Dine Divide/Auto Expreso
+- [x] Verified in browser: all 5 project cards now share the same thumbnail treatment
+
 ## Follow-up — fix: "Sánchez" coral box touching "Darío" text
 - [x] Added `margin-left: 0.15em` to `.hero h1 .highlight` so the coral box no longer sits flush against the preceding word — previously relied only on the plain text space character, which read as touching/too-tight at the new smaller 375px breakpoint font size
 - [x] Verified in browser: clear visible gap between "Darío" and the "Sánchez" box now
