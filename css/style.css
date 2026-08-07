@@ -761,7 +761,8 @@ main > .section:first-child {
   gap: 20px;
 }
 
-.case-study-frames img {
+.case-study-frames img,
+.case-study-frames video {
   display: block;
   width: 100%;
   height: auto;

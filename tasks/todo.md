@@ -75,6 +75,12 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Verified via computed layout at two real widths: 352px (font resolves to 31.68px, heading width 288.67px, well inside the viewport, `body.scrollWidth` 337px — no horizontal overflow) and 375px (33.78px font, clean single line, confirmed visually via screenshot); the upper mobile bound (700-720px) reuses the same 44px cap already verified safe earlier
 - [x] Removed the now-superseded standalone `@media (max-width: 375px)` block
 
+## Follow-up — walkthrough video on the AstroFund project page
+- [x] Copied `C:\Users\jsaco\Videos\astrofund-promovid.mp4` (6.37MB) into `assets/projects/astrofund/`
+- [x] Added a `<video controls playsinline preload="metadata">` element at the bottom of `.case-study-frames`, after the 4 screenshot frames and before the footer; extended the existing `.case-study-frames img { border-radius: ... }` CSS rule to also cover `video` so it matches the rounded-corner treatment of the screenshots
+- [x] Added `.mp4` to the local dev server's mime map (`serve.js`) for local testing
+- [x] Verified via direct video-element inspection (readyState 4 / HAVE_ENOUGH_DATA, 1920×1080, 39.9s, no error) and by actually calling `.play()` and confirming `currentTime` advances — a screenshot taken mid-check showed a rendering glitch (this session has had recurring screenshot-capture corruption issues), but the real DOM/playback state confirms the video works correctly
+
 ## Follow-up — swap FitForge and AstroFund grid positions
 - [x] Swapped the two tiles' order in the DOM so AstroFund now occupies the big teal spot (position 1) and FitForge takes the smaller amber spot (position 3) — sizing/color both come from `nth-child` CSS, so reordering the markup was enough, no style changes needed
 - [x] Verified in browser: AstroFund is now the large tile, FitForge the smaller one
