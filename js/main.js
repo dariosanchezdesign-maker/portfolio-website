@@ -113,7 +113,7 @@ const translations = {
     'projects.title': 'Proyectos',
     'projects.fitforge.caption': 'Aplicación móvil de fitness',
     'projects.dinedivide.caption': 'Aplicación enfocada en comida',
-    'projects.autoexpreso.caption': 'App de transporte y servicios automotrices',
+    'projects.astrofund.caption': 'Diseño de landing page fintech',
     'projects.sectordataviz.caption': 'Con Estudios Técnicos Inc.',
     'projects.bancopopular.caption': 'Diseño de landing page',
 
@@ -124,8 +124,8 @@ const translations = {
 
     'project.fitforge.tagline': 'Estudio de caso de diseño de aplicación móvil de fitness.',
     'project.dinedivide.tagline': 'Estudio de caso de diseño de aplicación enfocada en comida.',
-    'project.autoexpreso.tagline':
-      'Estudio de caso de diseño de aplicación de transporte y servicios automotrices.',
+    'project.astrofund.tagline':
+      'Estudio de caso de diseño de landing page fintech para AstroFund, una marca ficticia.',
     'project.sectordataviz.tagline':
       'Proyecto de visualización de datos para análisis sectorial, desarrollado con Estudios Técnicos Inc.',
     'project.bancopopular.tagline': 'Estudio de caso de diseño de landing page para Banco Popular.',

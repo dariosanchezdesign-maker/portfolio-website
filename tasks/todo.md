@@ -75,6 +75,18 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Verified via computed layout at two real widths: 352px (font resolves to 31.68px, heading width 288.67px, well inside the viewport, `body.scrollWidth` 337px — no horizontal overflow) and 375px (33.78px font, clean single line, confirmed visually via screenshot); the upper mobile bound (700-720px) reuses the same 44px cap already verified safe earlier
 - [x] Removed the now-superseded standalone `@media (max-width: 375px)` block
 
+## Follow-up — swap FitForge and AstroFund grid positions
+- [x] Swapped the two tiles' order in the DOM so AstroFund now occupies the big teal spot (position 1) and FitForge takes the smaller amber spot (position 3) — sizing/color both come from `nth-child` CSS, so reordering the markup was enough, no style changes needed
+- [x] Verified in browser: AstroFund is now the large tile, FitForge the smaller one
+
+## Follow-up — replace Auto Expreso with AstroFund
+- [x] User pointed to a separate real project at `C:\Users\jsaco\Documents\astrofund-website` — a fictional fintech landing page (jeton.com-inspired visual/motion language, built across ~28 rounds in its own session). Read its `tasks/todo.md` to understand the project before using it.
+- [x] Served it locally (port 8082) and captured 4 real screenshots: hero ("One orbit. Every currency."), the Add/Send/Exchange feature-word section, the phone mockup ("Every orbit, in one app"), and the glossy 3D card-render section — copied into `assets/projects/astrofund/frame-1..4.jpg`
+- [x] Removed Auto Expreso entirely: deleted `projects/auto-expreso.html` and `assets/projects/auto-expreso/`, removed its EN/ES translation keys
+- [x] Added `projects/astrofund.html` (same shared header/footer/back-link pattern as every other project page) and a new homepage tile in the same grid position — inherits the amber tile color automatically via existing `nth-child` CSS, no style changes needed
+- [x] Added translation keys `projects.astrofund.caption` ("Fintech landing page design" / "Diseño de landing page fintech") and `project.astrofund.tagline` (EN/ES)
+- [x] Verified in browser: homepage tile shows the real hero screenshot, detail page renders all 4 frames correctly through to the footer
+
 ## Follow-up — consistent thumbnails for all project cards
 - [x] Sector Data Viz and Banco Popular tiles previously used their logo marks (`.tile-thumb.contain`, `object-fit: contain`) instead of a screenshot, looking visually different from the other 3 cards
 - [x] Swapped both to `frame-2.png` (a more visual, less text-heavy screen from each case study) using the standard full-bleed `.tile-thumb` (no `contain`), matching FitForge/Dine Divide/Auto Expreso
