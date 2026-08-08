@@ -96,7 +96,7 @@ const translations = {
     'about.stat.education.title': 'Educación',
     'about.stat.education.degree': 'Licenciatura en Diseño Industrial',
     'about.copy':
-      'Como recién graduado en Diseño Industrial en transición hacia el Diseño UI/UX, aporto una perspectiva fresca y una pasión por crear diseños intuitivos centrados en el usuario. Mi formación en Diseño Industrial me brinda una combinación única de habilidades para resolver problemas y sensibilidad estética, que ahora aplico al espacio digital.',
+      'Ese flujo de trabajo significa que investigación, prototipado y desarrollo ocurren en un solo ciclo continuo en lugar de tres etapas separadas — las ideas salen a producción mientras siguen frescas, no después de una semana traduciéndolas entre herramientas. Mi formación en Diseño Industrial se refleja en cómo trabajo: resolver el sistema antes de tocar los píxeles, y dejar que la IA se encargue de lo repetitivo para que el pensamiento siga siendo humano.',
 
     'journey.title': 'Trayectoria',
     'journey.truenorth.dates': 'Abr 2025 – Nov 2025',
