@@ -122,24 +122,27 @@ const translations = {
       'Combino el oficio del diseño con herramientas nativas de IA como Figma, Claude Code y Cursor para pasar de la idea a un producto funcional más rápido, sin sacrificar la calidad.',
 
     'projects.title': 'Proyectos',
-    'projects.fitforge.caption': 'Aplicación móvil de fitness',
-    'projects.dinedivide.caption': 'Aplicación enfocada en comida',
-    'projects.astrofund.caption': 'Diseño de landing page fintech',
-    'projects.sectordataviz.caption': 'Con Estudios Técnicos Inc.',
-    'projects.bancopopular.caption': 'Diseño de landing page',
+    'projects.fitforge.caption': 'App de fitness para seguir tu progreso de entrenamiento',
+    'projects.dinedivide.caption': 'Divide la cuenta por artículo y liquida rápido',
+    'projects.astrofund.caption': 'Pagos multidivisa en una sola cuenta',
+    'projects.sectordataviz.caption': 'Panel de datos de empleo y salarios por sector',
+    'projects.bancopopular.caption': 'Rediseño de landing page con navegación simplificada',
 
     'footer.eyebrow': 'Contáctame',
     'footer.title': 'Contacto',
 
     'common.back': '← Volver a Proyectos',
 
-    'project.fitforge.tagline': 'Estudio de caso de diseño de aplicación móvil de fitness.',
-    'project.dinedivide.tagline': 'Estudio de caso de diseño de aplicación enfocada en comida.',
+    'project.fitforge.tagline':
+      'Estudio de caso de una app de fitness móvil — desde el onboarding hasta el seguimiento diario de entrenamientos.',
+    'project.dinedivide.tagline':
+      'Una app para dividir cuentas entre amigos, ya sea en partes iguales o por artículo, y liquidar en segundos.',
     'project.astrofund.tagline':
-      'Estudio de caso de diseño de landing page fintech para AstroFund, una marca ficticia.',
+      'Un concepto fintech ficticio: una sola cuenta para todas las divisas, diseñado de principio a fin en Figma y Webflow.',
     'project.sectordataviz.tagline':
-      'Proyecto de visualización de datos para análisis sectorial, desarrollado con Estudios Técnicos Inc.',
-    'project.bancopopular.tagline': 'Estudio de caso de diseño de landing page para Banco Popular.',
+      'Panel de datos de empleo y salarios por sector, desarrollado con Estudios Técnicos Inc.',
+    'project.bancopopular.tagline':
+      'Rediseño de landing page para Banco Popular, enfocado en una navegación más clara y un hero más definido.',
   },
 };
 
