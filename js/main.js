@@ -78,6 +78,7 @@ serviceItems.forEach((item) => {
 const translations = {
   es: {
     'nav.about': 'Sobre mí',
+    'nav.journey': 'Trayectoria',
     'nav.experience': 'Experiencia',
     'nav.projects': 'Proyectos',
     'nav.contact': 'Contacto',
@@ -96,6 +97,20 @@ const translations = {
     'about.stat.education.degree': 'Licenciatura en Diseño Industrial',
     'about.copy':
       'Como recién graduado en Diseño Industrial en transición hacia el Diseño UI/UX, aporto una perspectiva fresca y una pasión por crear diseños intuitivos centrados en el usuario. Mi formación en Diseño Industrial me brinda una combinación única de habilidades para resolver problemas y sensibilidad estética, que ahora aplico al espacio digital.',
+
+    'journey.title': 'Trayectoria',
+    'journey.truenorth.dates': 'Abr 2025 – Nov 2025',
+    'journey.truenorth.role': 'Desarrollador Web',
+    'journey.truenorth.desc':
+      'Diseñé y desarrollé sitios web responsivos y accesibles (WCAG) para agencias gubernamentales en Webflow y WordPress — traduciendo prototipos de Figma en sitios listos para producción, optimizando rendimiento y SEO en múltiples proyectos del sector público.',
+    'journey.estudios.dates': 'Sep 2024 – Feb 2025',
+    'journey.estudios.role': 'Diseñador UX/UI',
+    'journey.estudios.desc':
+      'Refiné la identidad de marca y las guías visuales para lograr una imagen más cohesiva y moderna, y lideré investigación de usuarios y pruebas de usabilidad que mejoraron un 30% los índices de satisfacción en aplicaciones clave.',
+    'journey.myf.dates': 'Mar 2024 – Ago 2024',
+    'journey.myf.role': 'Diseñador UX/UI',
+    'journey.myf.desc':
+      'Rediseñé la landing page de la empresa y desarrollé un sistema de gestión de aprendizaje para adultos jóvenes usando Figma y Webflow, logrando un incremento del 25% en la retención de visitantes y un 30% en la participación de usuarios en los primeros tres meses.',
 
     'experience.title': 'Experiencia',
     'experience.01.title': 'UI/UX',

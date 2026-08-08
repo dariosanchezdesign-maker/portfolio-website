@@ -235,6 +235,39 @@ Not verified: mobile/narrow-viewport rendering — same long-standing limitation
 - [x] Increased grid row height (170px → 200px) so thumbnails have room to breathe
 - [x] Verified in browser: all 5 tiles render correctly, no more text/heading overlap
 
+## Follow-up — new "Where I've Been" work-history section
+
+Job history was dropped from the site back when "Experience" was repurposed to mean services/skills (see the "Content redesign — match live Webflow site" section below). Bringing it back as its own section, sourced from `assets/Dario-Sanchez-CV.pdf`.
+
+Content (condensed to 1-2 sentence summaries per user's choice, not full CV bullet lists):
+- **Truenorth Corporation** — Web Developer — Apr 2025 – Nov 2025: responsive, WCAG-compliant gov-agency sites in Webflow/WordPress, translating Figma prototypes into production sites, optimizing performance/SEO across public-sector projects.
+- **Estudios Técnicos Inc.** — UX/UI Designer — Sept 2024 – Feb 2025 *(CV printed "Sept 2024 - Feb 2024", reversed; corrected per user's confirmation to Feb 2025 to fit between MYF and Truenorth)*: refined brand identity/visual guidelines, led user research/usability testing → 30% improvement in satisfaction scores.
+- **Meet Your Finance (MYF)** — UX/UI Designer — Mar 2024 – Aug 2024: redesigned landing page + built a learning management system in Figma/Webflow → 25% increase in visitor retention, 30% increase in user engagement.
+
+- [x] Add new `<section class="section" id="journey">` in `index.html` between `#about` and `#experience`, styled as a vertical timeline (company, role, dates, condensed description) — new CSS in `style.css` reusing existing tokens (coral accent, section-title/win95-letter pattern, card surface treatment), not a copy of the services accordion
+- [x] Add "Where I've Been" nav link (`#journey`) to the header nav on `index.html` and all 5 project detail pages (astrofund, banco-popular-landing-page, dine-divide, fitforge, sector-data-viz — the plan said 6, but auto-expreso was replaced by astrofund in an earlier follow-up, so there are only 5), between About and Experience
+- [x] Tag all new copy with `data-i18n` and add EN/ES entries to `translations.es` in `main.js` (nav label + section title + 3 job entries), following the existing i18n pattern
+- [x] Verify in browser: section renders correctly in the page flow, nav link scroll-spy works, language toggle correctly translates the new section
+- [x] Update review section
+
+## Review
+
+Added a new "Where I've Been" section between About and Experience, showing job history pulled from `assets/Dario-Sanchez-CV.pdf` (previously dropped from the site entirely — see the "Content redesign" section below).
+
+Content, per user's confirmed choices:
+- Condensed each role to a 1-2 sentence summary (not full CV bullet lists), keeping the key stats (25%/30%/30% improvements)
+- Corrected the Estudios Técnicos Inc. date range from the CV's reversed "September 2024 - February 2024" to "Sept 2024 – Feb 2025" (user-confirmed)
+- Company names (Truenorth Corporation, Estudios Técnicos Inc., Meet Your Finance (MYF)) left untranslated as proper nouns, matching the site's existing convention
+
+Implementation:
+- New `.journey-list`/`.journey-item` timeline in `index.html`: a 3-column grid per entry (dates | rail with dot+line | content) that collapses to a 2-column stacked layout (rail | dates-then-content) at the existing 720px mobile breakpoint — new CSS added to `style.css`, reusing existing tokens (coral dot/accent, `--border`, `--text-muted`) rather than inventing a new palette
+- Added a "Where I've Been" nav link (`#journey`) between About and Experience on the homepage and all 5 project detail pages; scroll-spy required no JS changes since it already works generically off `[data-nav]` elements
+- Added `journey.*` translation keys to `main.js`'s `translations.es` dictionary; the existing `data-i18n-first` (pixel-letter heading) and generic `data-i18n` machinery needed no changes to support the new section
+
+Verified in a local preview (temporary Node static server, since this project isn't wired to a dev-server script): homepage nav, section content, and timeline render correctly in English; language toggle correctly switches the nav label, section title, and all 3 job entries to Spanish; simulated the 720px mobile breakpoint via injected CSS (this environment's browser-resize tool has a documented floor above typical phone widths, same long-standing limitation noted elsewhere in this file) and confirmed the timeline stacks cleanly with the connecting rail line intact.
+
+One thing worth flagging: the "W" in "Where I've Been" renders as an unusual compact/blocky shape in the Silkscreen pixel font — briefly investigated this as a possible rendering bug via an isolated test page, but confirmed it's simply how Silkscreen draws a bold uppercase W, consistent with the font's existing quirky look on other letters (A, E, P, C) already used elsewhere on the site. No fix needed, but let me know if you'd rather the win95-letter treatment skip "W" specifically (e.g. accent a different letter, or leave the heading in plain Poppins).
+
 ---
 
 # Full visual redesign — Mistral.ai-inspired look (replaces Windows 95 theme)

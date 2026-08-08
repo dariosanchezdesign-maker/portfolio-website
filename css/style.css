@@ -474,6 +474,77 @@ main > .section:first-child {
   margin: 0;
 }
 
+/* Where I've Been — job history timeline */
+.journey-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-item {
+  display: grid;
+  grid-template-columns: 140px 24px 1fr;
+  grid-template-areas: "dates rail content";
+  column-gap: 24px;
+  padding-bottom: 40px;
+}
+
+.journey-dates {
+  grid-area: dates;
+  padding-top: 3px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.journey-rail {
+  grid-area: rail;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.journey-dot {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.journey-line {
+  flex: 1;
+  width: 2px;
+  margin-top: 6px;
+  background: var(--border);
+}
+
+.journey-item:last-child .journey-line {
+  background: none;
+}
+
+.journey-content h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-bottom: 4px;
+}
+
+.journey-company {
+  color: var(--coral);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+}
+
+.journey-desc {
+  max-width: 640px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
 /* Services accordion */
 .services-list {
   border-top: 1px solid var(--border);
@@ -816,6 +887,14 @@ main > .section:first-child {
   .hero-photo { width: 160px; height: 160px; }
   .badge { display: none; }
   .about-grid { grid-template-columns: 1fr; }
+
+  .journey-item {
+    grid-template-columns: 24px 1fr;
+    grid-template-areas:
+      "rail dates"
+      "rail content";
+    row-gap: 4px;
+  }
   .projects-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
   .project-tile:nth-child(1),
   .project-tile:nth-child(2) { grid-column: span 1; grid-row: span 1; }
