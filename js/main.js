@@ -128,7 +128,6 @@ const translations = {
     'projects.sectordataviz.caption': 'Panel de datos de empleo y salarios por sector',
     'projects.bancopopular.caption': 'Rediseño de landing page con navegación simplificada',
 
-    'footer.eyebrow': 'Contáctame',
     'footer.title': 'Contacto',
 
     'common.back': '← Volver a Proyectos',
