@@ -115,12 +115,8 @@ const translations = {
     'experience.title': 'Experiencia',
     'experience.01.title': 'UI/UX',
     'experience.01.body': 'Creación de interfaces de usuario fluidas, efectivas y agradables de usar.',
-    'experience.02.title': 'Web y Aplicaciones Móviles',
-    'experience.02.body': 'Convirtiendo ideas en experiencias excepcionales para web y aplicaciones móviles.',
     'experience.03.title': 'Desarrollo',
     'experience.03.body': 'Haciendo realidad tu visión mediante tecnología de vanguardia e innovaciones de diseño modernas.',
-    'experience.04.title': 'Diseño y Creatividad',
-    'experience.04.body': 'Creación de diseños visualmente cautivadores que conectan con tu audiencia.',
     'experience.05.title': 'Flujo de Trabajo con IA',
     'experience.05.body':
       'Combino el oficio del diseño con herramientas nativas de IA como Figma, Claude Code y Cursor para pasar de la idea a un producto funcional más rápido, sin sacrificar la calidad.',
